@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Bulk Email</title>
+    <script src="./emailForm.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Send Bulk Email</h1>
+    <div style="display: inline">
+        <div style="width:29%; display: inline-block; float:left; margin-right: 52px; margin-left: 10px;">
+            <form>
+                <label for="fromEmail">From Email:</label><br>
+                <input type="email" id="fromEmail" name="fromEmail" placeholder="Enter From Email..."><br><br>
+                <label for="fromName">From Name:</label><br>
+                <input type="text" id="fromName" name="fromName" placeholder="Enter From Name..."><br><br>
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="subject" name="subject" placeholder="Enter Subject..."><br><br>
+                <label for="MailBody">Mail Body:</label><br>
+                <textarea id="MailBody" name="MailBody" rows="4" cols="50"></textarea><br>
+                <button id="seePreview">See Preview</button><br><br>
+                <label for="toEmails">To Emails:</label><br>
+                <textarea id="toEmails" name="toEmails" rows="4" cols="50"></textarea><br><br>
+                <button id="submitBtn">Submit</button>
+            </form>
+        </div>
+        <div style="width: 60%; display: inline-block; border: 1px solid blue; padding: 5px;">
+            <h3>Mail Preview</h3>
+            <iframe id="previewWindow"
+                onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+                style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
